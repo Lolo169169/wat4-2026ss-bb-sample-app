@@ -22,10 +22,10 @@ export class CounterView {
                 .highlight { background-color: yellow; }
             </style>
             <div>
-                <h2>Counter: <span id="counter-value">0</span></h2>
+                <h2>Counter: <span id="counter-value" data-testid="counter-value">0</span></h2>
                 <button id="increment">Increment</button>
                 <button id="decrement">Decrement</button>
-                <p>isPrime: <span id="is-prime"></span></p>
+                <p>isPrime: <span id="is-prime" data-testid="is-prime"></span></p>
             </div>
         `;
 

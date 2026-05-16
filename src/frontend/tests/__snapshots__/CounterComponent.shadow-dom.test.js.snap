@@ -1,0 +1,63 @@
+// Jest Snapshot v1, https://jestjs.io/docs/snapshot-testing
+
+exports[`When ApiService returns initial value 10, increments to 20 CounterComponent should display incremented value 20 1`] = `<my-counter />`;
+
+exports[`When ApiService returns initial value 10, increments to 20 CounterComponent should display incremented value 20 2`] = `
+ShadowRoot {
+  Symbol(SameObject caches): {
+    "childNodes": NodeList [
+      
+            ,
+      <style>
+        
+                .highlight { background-color: yellow; }
+            
+      </style>,
+      
+            ,
+      <div>
+        
+                
+        <h2>
+          Counter: 
+          <span
+            data-testid="counter-value"
+            id="counter-value"
+          >
+            20
+          </span>
+        </h2>
+        
+                
+        <button
+          id="increment"
+        >
+          Increment
+        </button>
+        
+                
+        <button
+          id="decrement"
+        >
+          Decrement
+        </button>
+        
+                
+        <p>
+          isPrime: 
+          <span
+            data-testid="is-prime"
+            id="is-prime"
+          >
+            false
+          </span>
+        </p>
+        
+            
+      </div>,
+      
+        ,
+    ],
+  },
+}
+`;

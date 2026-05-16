@@ -1,4 +1,4 @@
-export class Math {
+export default class Math {
     static isPrime(n) {
         if (n < 2) return false;
 
