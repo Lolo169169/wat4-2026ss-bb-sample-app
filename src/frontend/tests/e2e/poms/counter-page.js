@@ -5,10 +5,13 @@ export class CounterPage {
     this.page = page;
     this.dockerSetupInfo = dockerSetupInfo;
 
-    this.incrementButton = this.page.getByRole('button', { name: 'Increment' });
-    this.decrementButton = this.page.getByRole('button', { name: 'Decrement' });
-    this.counterValueInfo = this.page.getByTestId('counter-value');
-    this.isPrimeInfo = this.page.getByTestId('is-prime');
+    // Elements are rendered inside nested shadow roots (<my-app> -> <my-counter>),
+    // so use a deep selector to pierce shadow DOM and locate the nodes.
+    const deep = 'my-app >>> my-counter >>> ';
+    this.incrementButton = this.page.locator(`${deep}button#increment`);
+    this.decrementButton = this.page.locator(`${deep}button#decrement`);
+    this.counterValueInfo = this.page.locator(`${deep}[data-testid="counter-value"]`);
+    this.isPrimeInfo = this.page.locator(`${deep}[data-testid="is-prime"]`);
 
     this.frontendUrl = `http://localhost:${this.dockerSetupInfo.frontendPort}/`;
     this.backendUrl = `http://localhost:${this.dockerSetupInfo.backendPort}/`;
